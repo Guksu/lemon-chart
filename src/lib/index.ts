@@ -1,1 +1,1 @@
-export { default as TestComponents } from "./components/TestComponents";
+export { default as BarChart } from "./components/BarChart/index";

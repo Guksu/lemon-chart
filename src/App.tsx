@@ -1,5 +1,8 @@
+import React from "react";
+import { BarChart } from "./lib/index";
+
 function App() {
-  return <div>Home</div>;
+  return <BarChart />;
 }
 
 export default App;
