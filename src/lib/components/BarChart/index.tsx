@@ -1,3 +1,5 @@
+import ChartCanvas from "../ChartCanvas";
+
 export default function BarChart() {
   const CHART_WIDTH = 900;
   const CHART_HEIGHT = 600;
@@ -13,14 +15,7 @@ export default function BarChart() {
   const MAX_DATA = Math.max(...MOCK_DATA);
 
   return (
-    <div
-      style={{
-        backgroundColor: "blanchedalmond",
-        width: CHART_WIDTH,
-        height: CHART_HEIGHT,
-      }}
-    >
-      {/* Chart */}
+    <ChartCanvas height={CHART_HEIGHT} width={CHART_WIDTH}>
       <svg width={CHART_WIDTH} height={CHART_HEIGHT}>
         {/* Y축 */}
         <line x1={x0} y1={20} x2={x0} y2={xAxisY} style={{ stroke: "green" }} />
@@ -93,7 +88,6 @@ export default function BarChart() {
         })}
         {/*----------*/}
       </svg>
-      {/*---------*/}
-    </div>
+    </ChartCanvas>
   );
 }
